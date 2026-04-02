@@ -1,0 +1,5 @@
+# No dependencies are required to serve this static site.
+# This file is a placeholder for any local tooling you add later,
+# e.g.:
+# pillow
+# htmlmin

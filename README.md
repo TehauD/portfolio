@@ -1,63 +1,75 @@
-# Tehau DeBarthe
+# Tehau DeBarthe — Portfolio Site
 
-<!--
-Architecture:
-- Static asset: ./assets/tehau-ascii-face.png
-- Editable profile text: everything below is normal README text/HTML and can be edited without regenerating the image.
-- GitHub strips most custom CSS, so this uses GitHub-safe HTML + Markdown only.
--->
+A single-file, self-contained marketing/portfolio page for Tehau DeBarthe —
+Enterprise AI Architect & Machine Learning Engineer.
 
-<table>
-<tr>
-<td width="34%" valign="top" align="center">
+**Live preview:** https://claude.ai/artifact/Kohwr2sVVFmpL6VhhvyX1H
 
-<img src="./assets/tehau-ascii-face.png" alt="ASCII-style portrait of Tehau Debarthe" width="100%" />
+---
 
-</td>
-<td width="66%" valign="top">
+## What's in this package
 
-<h1>tehau@enterprise-ai-os</h1>
-
-```text
-OS:........................ Enterprise AI Architecture
-Uptime:.................... 15+ Years
-Host:...................... Healthcare | Finance | Marketing | Chemical
-Kernel:.................... Systems Thinking + Intelligent Automation
-IDE:....................... VS Code | GitHub | Copilot | Azure AI Foundry
-
-Languages.Programming:..... PowerShell, Python, JavaScript, SQL, C#
-Languages.Platforms:....... Azure, M365, SharePoint, Dataverse, Fabric
-Languages.AI:.............. Azure OpenAI, Copilot Studio, RAG, Agents
-Languages.Human:........... Business, Technology, Governance
-
-Hobbies.Software:.......... AI Frameworks, Agent Design, Evaluation Systems
-Hobbies.Real:.............. Family, Learning, Building Useful Things
-
-Contact.LinkedIn:.......... linkedin.com/in/tehau
-Contact.GitHub:............ github.com/TehauDebarthe
-
-Current.Role:.............. Enterprise AI Architect
-Current.Mission:........... Reduce Administrative Burden Through AI
-
-Signature.Systems:......... FORGE
-Signature.Systems:......... MIMIR
-Signature.Systems:......... CRUCIBLE
-Signature.Systems:......... BIFROST
-
-Career.Signal:............. Enterprise AI Strategy
-Career.Signal:............. Healthcare Transformation
-Career.Signal:............. Platform Governance
-Career.Signal:............. Large-Scale Automation
-Career.Signal:............. Agent Engineering
-
-Impact:.................... Millions of Manual Interactions Eliminated
-Impact:.................... Enterprise AI Governance Standards
-Impact:.................... AI Champion Program Co-Founder
-Impact:.................... Solutions Supporting 100k+ Users
-
-North.Star:................ Care begins where automation ends.
+```
+.
+├── index.html              The full site — one file, no build step
+├── README.md                This file
+└── RUNNING-LOCALLY.md        How to preview it on your own machine
 ```
 
-<p align="center">
-  <strong>Turning complex enterprise AI into reliable, reusable, governed systems.</strong>
-</p>
+## Design concept
+
+The visual language is drafting/blueprint-inspired — a grid-line hero that
+draws itself in on load, monospace annotations used as real section
+indices (not decoration), and a CAD-style title bar in the nav. It's meant
+to read as "systems architecture," not a generic template.
+
+- **Zero dependencies** beyond Google Fonts (Fraunces, Inter, IBM Plex Mono),
+  loaded via `<link>` tags in `<head>`.
+- **Light and dark themes** are both built in. It follows the visitor's OS
+  preference by default; the "MODE" button in the top-right cycles
+  System → Light → Dark.
+- **No JavaScript framework, no build tool.** Everything — HTML, CSS, and
+  the small amount of JS for the theme toggle and the hero grid animation —
+  lives in `index.html`.
+- **Content sources:** the copy is pulled directly from the LinkedIn About
+  section and live GitHub repositories at the time this was built. If either
+  changes, update the corresponding section in `index.html` directly — there's
+  no CMS or data file to keep in sync.
+
+## Deploying
+
+This is a static file, so it will run anywhere that serves static HTML:
+
+- **GitHub Pages** — commit `index.html` to a repo (e.g. a repo named
+  `<username>.github.io`, or any repo with Pages enabled on a branch), and it
+  will be served at that URL with no configuration.
+- **Netlify / Vercel / Cloudflare Pages** — drag-and-drop the file, or connect
+  the repo; no build command is needed.
+- **Any static host or web server** — Nginx, Apache, S3 + CloudFront, etc.
+
+## Customizing
+
+Everything lives in `index.html`, organized top to bottom in the same order
+it renders:
+
+| Section | What to edit |
+|---|---|
+| `<style>` block, `:root` | Color tokens (light theme) and the `dark` overrides just below it |
+| `.hero` | Headline, byline, and the two primary call-to-action buttons |
+| `#focus` | The focus-area grid items |
+| `#systems` | Project panels — name, description, tags, and repo link, one `.system` block each |
+| `#initiatives` | The "recent initiatives" log rows |
+| `#experience` | The timeline — one `.tl-item` per role |
+| `#education` | Degrees and certifications |
+| `#connect` | Closing statement and contact links |
+
+To add or remove a project panel, copy an existing `.system` block inside
+`#systems` and edit its contents — no other file needs to change.
+
+## Known gaps
+
+- The `RESONANCE-MK-II` GitHub project isn't represented yet — add a
+  `.system` panel for it once its description is finalized.
+- The experience section is intentionally condensed for a marketing page
+  rather than a full resume; expand individual `.tl-item` blocks if you want
+  more detail.
