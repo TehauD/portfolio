@@ -1,82 +1,173 @@
-# Running this locally with Python
+# Running the Portfolio Locally
 
-`index.html` is a static file with no server-side code, so technically you
-can just double-click it and it'll open in your browser. But opening it via
-`file://` disables a few browser features (clipboard access, some font
-loading edge cases), so serving it over `http://localhost` is more reliable
-— and this is also the setup to use if you plan to extend the site with any
-Python-based tooling later (a build/minify step, a link checker, etc.).
+This portfolio is a static site built with HTML, CSS, and JavaScript.
 
-Below is a self-contained local setup using a Python virtual environment.
+You can open `index.html` directly in a browser. For more consistent testing, serve the repository through `localhost`. This avoids common `file://` restrictions and better matches a hosted environment.
 
-## 1. Prerequisites
+## Quick Start
 
-- Python 3.9 or later (`python3 --version` to check)
+From the repository root, run:
 
-## 2. Create and activate a virtual environment
-
-From inside this package's folder:
-
-**macOS / Linux**
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python -m http.server 8000
 ```
 
-**Windows (PowerShell)**
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Press `Ctrl+C` in the terminal to stop the server.
+
+## Prerequisite
+
+Confirm that Python is available:
+
+```bash
+python --version
+```
+
+Some macOS and Linux environments use `python3` instead:
+
+```bash
+python3 --version
+```
+
+If `python3` is the available command, start the server with:
+
+```bash
+python3 -m http.server 8000
+```
+
+## Optional Virtual Environment
+
+A virtual environment is not required to run the portfolio. The site has no Python runtime dependencies.
+
+Create a virtual environment only if you plan to add local development tools such as:
+
+- Link validation
+- HTML or CSS optimization
+- Image processing
+- Accessibility checks
+- Build or deployment automation
+
+Create the environment:
+
+```bash
+python -m venv .venv
+```
+
+### Activate on Windows PowerShell
+
 ```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 ```
 
-**Windows (Command Prompt)**
+### Activate on Windows Command Prompt
+
 ```cmd
-python -m venv venv
-venv\Scripts\activate.bat
+.venv\Scripts\activate.bat
 ```
 
-Your terminal prompt should now show `(venv)` at the start of the line.
-
-## 3. Install dependencies (optional)
-
-The site itself has no Python dependencies — it's static HTML/CSS/JS. A
-`requirements.txt` is included as a placeholder in case you add local
-tooling later (e.g. `pillow` for image processing, `htmlmin` for
-minification):
+### Activate on macOS or Linux
 
 ```bash
-pip install -r requirements.txt
+source .venv/bin/activate
 ```
 
-If you have nothing to add yet, you can skip this step entirely.
-
-## 4. Serve the site locally
-
-Python's built-in `http.server` module needs no extra packages:
-
-```bash
-python3 -m http.server 8080
-```
-
-Then open **http://localhost:8080** in your browser. Press `Ctrl+C` in the
-terminal to stop the server when you're done.
-
-## 5. Leaving the virtual environment
-
-When you're finished:
+Deactivate the environment when finished:
 
 ```bash
 deactivate
 ```
 
-This returns your terminal to its normal (non-venv) state. The `venv/`
-folder can be deleted safely at any time — it's just the isolated Python
-environment, not part of the site itself.
+The `.venv/` directory is local development state and should not be committed. Add it to `.gitignore`:
+
+```gitignore
+.venv/
+```
+
+## Dependencies
+
+No dependency installation is required for the current site.
+
+Do not add an empty or placeholder `requirements.txt`. Add one only when the repository introduces Python-based tooling that requires external packages.
+
+## Using Another Port
+
+If port `8000` is already in use, select another port:
+
+```bash
+python -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+## Verify the Site
+
+After the local server starts, verify the following:
+
+- The homepage loads without console errors
+- Navigation links move to the expected sections
+- Light and dark themes work
+- External links open correctly
+- The layout remains readable at desktop, tablet, and mobile widths
+- Web fonts load when an internet connection is available
+- System font fallbacks remain readable when offline
 
 ## Troubleshooting
 
-| Symptom | Fix |
-|---|---|
-| `python3: command not found` | Try `python` instead — Windows installs often use that name. |
-| Fonts don't load locally | Google Fonts requires an internet connection even when serving locally — the page falls back to system fonts offline. |
-| Port 8080 already in use | Pick another port, e.g. `python3 -m http.server 8090`, and adjust the URL accordingly. |
+### Python command not found
+
+Try the alternate executable name:
+
+```bash
+python3 --version
+```
+
+On Windows, Python may also be available through the launcher:
+
+```powershell
+py -m http.server 8000
+```
+
+### Port already in use
+
+Choose another port:
+
+```bash
+python -m http.server 8081
+```
+
+### Fonts look different offline
+
+The portfolio requests web fonts from Google Fonts. Without an internet connection, the browser uses the configured system font fallbacks.
+
+### PowerShell blocks virtual-environment activation
+
+A virtual environment is optional. You can still serve the site without activating one:
+
+```powershell
+python -m http.server 8000
+```
+
+### Changes do not appear
+
+Refresh the browser. If the browser continues to show older content, perform a hard refresh or disable the browser cache while developer tools are open.
+
+## Project Philosophy
+
+The local workflow is intentionally simple:
+
+- No application framework
+- No build command
+- No package installation
+- No server-side runtime
+- No required virtual environment
+
+The repository keeps tooling lightweight so attention stays on the portfolio’s ideas, systems, research interests, and opportunities for thoughtful connection.
