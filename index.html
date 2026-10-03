@@ -3,475 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tehau DeBarthe — Enterprise AI Architect</title>
-<meta name="description" content="Tehau DeBarthe — Enterprise AI Architect & Machine Learning Engineer. Agentic systems, healthcare AI, Azure AI Foundry, and intelligent automation.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+<meta name="theme-color" content="#f8fafc">
+<title>Tehau DeBarthe | Building Intelligent Healthcare Systems</title>
+<meta name="description" content="Tehau DeBarthe is a Machine Learning Engineer building trusted, intelligent healthcare systems through enterprise AI architecture, agentic systems, machine learning, and automation.">
+<meta property="og:title" content="Tehau DeBarthe | Building Intelligent Healthcare Systems">
+<meta property="og:description" content="Machine Learning Engineer working at the intersection of healthcare, enterprise AI architecture, agentic systems, and trusted automation.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,520;1,9..144,420&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#EFF1EF;
-    --surface:#E4E8E4;
-    --ink:#16222B;
-    --ink-soft:#48565F;
-    --line:#C4CBC6;
-    --line-strong:#9AA5A0;
-    --accent:#9C6B28;
-    --accent-strong:#7E5720;
-    --accent-tint:#E9D9BC;
-    --on-accent:#F8F5EE;
-    --radius:2px;
-    --maxw:920px;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#0E1B26;
-      --surface:#142534;
-      --ink:#E9EDF0;
-      --ink-soft:#A9B7C0;
-      --line:rgba(233,237,240,0.16);
-      --line-strong:rgba(233,237,240,0.32);
-      --accent:#D6A34E;
-      --accent-strong:#F0BE68;
-      --accent-tint:rgba(214,163,78,0.16);
-      --on-accent:#16222B;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#0E1B26;
-    --surface:#142534;
-    --ink:#E9EDF0;
-    --ink-soft:#A9B7C0;
-    --line:rgba(233,237,240,0.16);
-    --line-strong:rgba(233,237,240,0.32);
-    --accent:#D6A34E;
-    --accent-strong:#F0BE68;
-    --accent-tint:rgba(214,163,78,0.16);
-    --on-accent:#16222B;
-  }
+:root{
+  --bg:#ffffff;--panel:#f5f8fc;--panel-strong:#edf4ff;--ink:#0c111b;--muted:#536176;
+  --line:#d7e1ef;--line-soft:#eaf0f7;--blue:#1769e8;--cyan:#11a9c0;--shadow:0 18px 45px rgba(38,71,120,.10);
+  --radius:18px;--max:1120px;
+}
+:root[data-theme="dark"]{
+  --bg:#07111f;--panel:#0e1b2d;--panel-strong:#11243b;--ink:#f4f8ff;--muted:#a9b9ce;
+  --line:#253b56;--line-soft:#162a42;--blue:#66a3ff;--cyan:#50d4e5;--shadow:0 18px 45px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}.mono{font-family:"IBM Plex Mono",monospace}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:32px 32px;opacity:.72;mask-image:linear-gradient(to bottom,#000 0%,transparent 80%)}
+.announcement{border-top:4px solid var(--blue);border-bottom:1px solid var(--line);background:var(--bg)}
+.announcement .wrap{display:flex;justify-content:space-between;gap:18px;padding:10px 0;font:12px "IBM Plex Mono",monospace;color:var(--muted)}
+.announcement strong{color:var(--ink);letter-spacing:.08em}.announcement span:last-child{text-align:right}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:.02em}.brand-mark{width:29px;height:29px;border-radius:8px;background:var(--blue);box-shadow:0 7px 16px rgba(23,105,232,.23);position:relative}.brand-mark::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;left:11px;top:11px}.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--muted)}.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--blue)}
+.actions{display:flex;align-items:center;gap:10px}.theme{width:39px;height:39px;border-radius:11px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px 18px;text-decoration:none;font-size:14px;font-weight:700;background:var(--bg)}.button.primary{background:var(--blue);border-color:var(--blue);color:white;box-shadow:0 10px 22px rgba(23,105,232,.23)}.button:hover{transform:translateY(-1px)}
+.hero{padding:82px 0 38px}.hero-card{position:relative;overflow:hidden;text-align:center;padding:82px 28px 64px;border:1px solid var(--line);border-radius:24px;background:color-mix(in srgb,var(--panel) 94%,transparent);box-shadow:var(--shadow)}
+.hero-card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(circle at 12% 72%,var(--blue) 0 2px,transparent 3px),radial-gradient(circle at 28% 28%,var(--cyan) 0 2px,transparent 3px),radial-gradient(circle at 72% 34%,var(--blue) 0 2px,transparent 3px),radial-gradient(circle at 88% 70%,var(--cyan) 0 2px,transparent 3px),linear-gradient(24deg,transparent 18%,var(--line) 18.2%,transparent 18.5%),linear-gradient(155deg,transparent 72%,var(--line) 72.2%,transparent 72.5%)}
+.hero-card>*{position:relative;z-index:1}
+.hero-card::before{content:"";position:absolute;width:560px;height:260px;border-radius:50%;left:50%;top:-160px;transform:translateX(-50%);background:radial-gradient(circle,rgba(23,105,232,.20),transparent 68%)}
+.kicker{position:relative;font:600 12px "IBM Plex Mono",monospace;color:var(--blue);letter-spacing:.13em;text-transform:uppercase}.hero h1{position:relative;margin:18px auto 16px;max-width:820px;font-size:clamp(3rem,7vw,6rem);line-height:.98;letter-spacing:-.065em}.gradient{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.hero .lede{max-width:720px;margin:0 auto;color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem)}.hero .trust{margin:20px 0 0;font-weight:700;color:var(--ink)}.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}.micro{margin-top:20px;font:12px "IBM Plex Mono",monospace;color:#8490a2}.micro span+span::before{content:" · ";margin:0 7px}
+section{padding:76px 0}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:end;margin-bottom:32px}.eyebrow{font:600 11px "IBM Plex Mono",monospace;color:var(--blue);letter-spacing:.13em;text-transform:uppercase}.section-head h2{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:13px 0 0}.section-head p{margin:0;color:var(--muted);font-size:17px}
+.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);box-shadow:0 12px 30px rgba(35,68,110,.05)}
+.about-card{padding:34px}.about-card h3{font-size:clamp(1.35rem,3vw,2rem);letter-spacing:-.035em;margin:0 0 16px}.about-card p{color:var(--muted);max-width:900px;margin:10px 0}.link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.belief{padding:28px}.belief .number{font:600 11px "IBM Plex Mono",monospace;color:var(--blue)}.belief h3{font-size:1.25rem;margin:30px 0 10px;letter-spacing:-.025em}.belief p{margin:0;color:var(--muted);font-size:14px}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-  }
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{padding:30px;display:flex;flex-direction:column;min-height:330px}.project-top{display:flex;justify-content:space-between;gap:20px}.project h3{font-size:1.65rem;letter-spacing:-.04em;margin:6px 0 0}.project-type{font:600 10px "IBM Plex Mono",monospace;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}.project p{color:var(--muted);font-size:14.5px}.project .why{font-weight:700;color:var(--ink);margin-top:18px}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 24px}.chip{border:1px solid var(--line);border-radius:99px;padding:4px 9px;font:11px "IBM Plex Mono",monospace;color:var(--muted)}.project .project-link{margin-top:auto;color:var(--blue);font-weight:700;text-decoration:none;font-size:14px}
+.now-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.now-main{padding:34px}.now-main h3{font-size:2rem;letter-spacing:-.04em;margin:8px 0 14px}.now-main p{margin:0;color:var(--muted)}.now-list{display:grid;gap:12px}.now-item{padding:20px}.now-item strong{display:block;font-size:14px}.now-item span{font-size:13px;color:var(--muted)}
+.timeline{border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:210px 1fr;gap:34px;padding:26px 0;border-bottom:1px solid var(--line)}.role time{font:12px "IBM Plex Mono",monospace;color:var(--blue)}.role h3{margin:0;font-size:1.08rem}.role .org{font-size:14px;color:var(--muted);margin-top:2px}.role p{margin:10px 0 0;color:var(--muted);font-size:14px;max-width:760px}
+.gratitude{padding-bottom:110px}.gratitude-card{padding:46px;text-align:center;background:var(--panel)}.gratitude-card h2{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.055em;line-height:1.05;margin:14px auto;max-width:760px}.gratitude-card p{color:var(--muted);max-width:760px;margin:0 auto}.gratitude-card em{display:block;margin-top:26px;color:var(--muted)}
+.connect{padding:70px 0;background:var(--panel);border-top:1px solid var(--line)}.connect-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.connect h2{font-size:clamp(2rem,5vw,3.75rem);letter-spacing:-.055em;line-height:1.05;margin:8px 0}.connect p{color:var(--muted);max-width:650px}
+footer{border-top:1px solid var(--line);padding:50px 0}.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px}.footer-brand p{color:var(--muted);font-size:14px;max-width:280px}.footer-col h3{font:600 10px "IBM Plex Mono",monospace;color:#8b96a8;letter-spacing:.12em;text-transform:uppercase}.footer-col a{display:block;margin:12px 0;color:var(--muted);font-size:14px;text-decoration:none}.copyright{margin-top:45px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font:11px "IBM Plex Mono",monospace}
+@media(max-width:880px){.nav-links{display:none}.section-head{grid-template-columns:1fr}.beliefs{grid-template-columns:repeat(2,1fr)}.now-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.connect-inner{display:block}.connect .actions{margin-top:24px}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,var(--max))}.announcement span:last-child{display:none}.hero{padding-top:38px}.hero-card{padding:58px 18px 46px}.hero h1{font-size:3.15rem}.beliefs,.project-grid{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:7px}.footer-grid{grid-template-columns:1fr}.actions .button.primary{display:none}.section-head h2{font-size:2.65rem}.gratitude-card{padding:34px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
 
-  a{color:inherit;}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif; margin:0; font-weight:520;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.research-card{position:relative;padding:30px;overflow:hidden}.research-index{position:absolute;right:24px;top:20px;font:600 11px "IBM Plex Mono",monospace;color:var(--line)}.research-card h3{font-size:1.45rem;letter-spacing:-.035em;margin:14px 0 10px}.research-card p{margin:0;color:var(--muted);font-size:14.5px}.research-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line-soft)}.research-meta span{font:10px "IBM Plex Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.research-meta span+span::before{content:"·";margin-right:7px;color:var(--blue)}
+.question-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.question{position:relative;padding:30px}.question-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--panel-strong);color:var(--blue);font:600 16px "IBM Plex Mono",monospace}.question h3{font-size:1.2rem;letter-spacing:-.025em;margin:22px 0 10px}.question p{margin:0;color:var(--muted);font-size:14px}.idea-invite{margin-top:16px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:30px;background:var(--panel)}.idea-invite h3{margin:8px 0 6px;font-size:1.35rem}.idea-invite p{margin:0;color:var(--muted)}.trust em{font-family:Georgia,serif;font-weight:400;letter-spacing:.005em}.about-card strong{color:var(--ink)}@media(max-width:760px){.research-grid,.question-grid{grid-template-columns:1fr}.idea-invite{display:block}.idea-invite .button{margin-top:22px}}
 
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
-  .rule{border:none; border-top:1px solid var(--line); margin:0;}
+/* Balanced editorial / research typography */
+.section-head h2{font-weight:700;max-width:12ch}
+.about-section{padding-top:88px}
+.about-intro{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);gap:clamp(42px,7vw,92px);align-items:end;margin-bottom:30px}
+.about-title h2{font-size:clamp(3rem,5.5vw,5rem);line-height:1.04;letter-spacing:-.055em;font-weight:700;margin:14px 0 0;max-width:10.5ch;text-wrap:balance}
+.profile-summary{padding:24px 0 4px;border-top:2px solid var(--blue);align-self:end}
+.profile-role{font:600 12px "IBM Plex Mono",monospace;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.profile-summary p{margin:0;color:var(--muted);font-size:16px;max-width:52ch}
+.profile-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.profile-tags span{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font:500 10px "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.03em;text-transform:uppercase}
+.about-card-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr);gap:0;padding:0;overflow:hidden}
+.about-statement{padding:36px 38px 32px}
+.about-statement h3{font-size:clamp(1.55rem,2.5vw,2.15rem);line-height:1.18;letter-spacing:-.035em;margin:12px 0 22px;max-width:24ch}
+.about-statement p{max-width:68ch}
+.current-interests{padding:36px 34px;background:var(--panel);border-left:1px solid var(--line)}
+.current-interests ul{list-style:none;padding:0;margin:18px 0 0}
+.current-interests li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink)}
+.current-interests li::before{content:"↳";color:var(--blue);margin-right:10px;font-family:"IBM Plex Mono",monospace}
+.about-invitation{grid-column:1/-1;padding:23px 38px 27px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px;background:color-mix(in srgb,var(--panel) 52%,var(--bg))}
+.about-invitation p{margin:0;max-width:58ch;font-size:14px;line-height:1.55}
+.about-invitation .link-row{margin:0;justify-content:flex-end;flex-shrink:0}
+.about-invitation .button{padding:10px 14px;font-size:12px}
+@media(max-width:900px){
+  .about-intro{grid-template-columns:1fr;gap:30px;align-items:start}
+  .about-title h2{max-width:13ch}
+  .profile-summary{max-width:680px}
+  .about-invitation{display:block}
+  .about-invitation .link-row{margin-top:20px;justify-content:flex-start}
+}
+@media(max-width:700px){
+  .about-section{padding-top:68px}
+  .about-card-grid{grid-template-columns:1fr}
+  .about-statement{padding:28px 24px}
+  .current-interests{border-left:0;border-top:1px solid var(--line);padding:28px 24px}
+  .about-invitation{padding:24px;grid-column:1}
+  .about-title h2{font-size:clamp(2.75rem,12vw,4rem)}
+}
 
-  /* ---- Nav ---- */
-  header.bar{
-    position:sticky; top:0; z-index:20;
-    background:color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .bar-inner{
-    max-width:var(--maxw); margin:0 auto; padding:14px 28px;
-    display:flex; align-items:center; justify-content:space-between;
-    gap:16px;
-  }
-  .filetag{
-    font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.02em;
-    color:var(--ink-soft);
-  }
-  .filetag strong{color:var(--ink); font-weight:500;}
-  nav.links{display:flex; gap:22px; font-size:14px;}
-  nav.links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .15s, border-color .15s;}
-  nav.links a:hover{color:var(--ink); border-color:var(--line-strong);}
-  .theme-toggle{
-    font-family:'IBM Plex Mono',monospace; font-size:12px;
-    background:none; border:1px solid var(--line-strong); color:var(--ink-soft);
-    padding:5px 10px; border-radius:var(--radius); cursor:pointer;
-  }
-  .theme-toggle:hover{color:var(--ink); border-color:var(--ink-soft);}
-
-  @media (max-width:640px){
-    nav.links{display:none;}
-  }
-
-  /* ---- Hero ---- */
-  .hero{position:relative; overflow:hidden; padding:96px 0 88px;}
-  .hero-grid{position:absolute; inset:0; z-index:0; opacity:.55; pointer-events:none;}
-  .hero-inner{position:relative; z-index:1;}
-  .tag-row{
-    display:flex; align-items:center; gap:10px; margin-bottom:26px;
-    font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-soft);
-  }
-  .tag-row .dot{width:6px; height:6px; background:var(--accent); border-radius:50%; flex:none;}
-  h1.headline{
-    font-size:clamp(2.1rem, 5vw, 3.4rem);
-    line-height:1.12;
-    max-width:14ch;
-    color:var(--ink);
-  }
-  .byline{
-    margin-top:22px; font-size:17px; color:var(--ink-soft); max-width:56ch;
-  }
-  .byline strong{color:var(--ink); font-weight:500;}
-  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;}
-  .btn{
-    font-size:14.5px; padding:11px 20px; border-radius:var(--radius);
-    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
-    border:1px solid var(--line-strong);
-    transition:background .15s, border-color .15s, color .15s;
-  }
-  .btn.primary{background:var(--accent-strong); color:var(--on-accent); border-color:var(--accent-strong);}
-  .btn.primary:hover{background:var(--accent);}
-  .btn.ghost{color:var(--ink); background:transparent;}
-  .btn.ghost:hover{border-color:var(--ink-soft);}
-
-  /* ---- Section shell ---- */
-  section{padding:64px 0;}
-  section + section{border-top:1px solid var(--line);}
-  .sec-head{display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:36px; flex-wrap:wrap;}
-  .sec-head h2{font-size:1.5rem;}
-  .sec-num{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-soft);}
-
-  /* ---- Focus areas ---- */
-  .focus-grid{
-    display:grid; grid-template-columns:repeat(2, 1fr); gap:0;
-    border-top:1px solid var(--line); border-left:1px solid var(--line);
-  }
-  .focus-item{
-    padding:18px 20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);
-    display:flex; gap:12px; align-items:flex-start;
-  }
-  .focus-item .mark{width:7px; height:7px; margin-top:7px; background:var(--accent); flex:none; transform:rotate(45deg);}
-  .focus-item span.label{font-size:15px;}
-  @media (max-width:640px){ .focus-grid{grid-template-columns:1fr;} }
-
-  /* ---- Systems (projects) ---- */
-  .systems{display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--line);}
-  .system{
-    padding:26px 0; border-bottom:1px solid var(--line);
-    display:grid; grid-template-columns:1fr 2.2fr; gap:24px;
-  }
-  .system .name{font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--ink);}
-  .system .name .path{color:var(--ink-soft);}
-  .system p{margin:0 0 14px; color:var(--ink-soft); font-size:15px; max-width:60ch;}
-  .system .meta{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px;}
-  .chip{
-    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-soft);
-    border:1px solid var(--line-strong); padding:2px 8px; border-radius:var(--radius);
-  }
-  .system a.view{font-size:14px; color:var(--accent-strong); text-decoration:none; border-bottom:1px solid var(--accent-strong); padding-bottom:1px;}
-  .system a.view:hover{color:var(--accent);}
-  @media (max-width:720px){ .system{grid-template-columns:1fr; gap:10px;} }
-
-  /* ---- Initiatives (log rows) ---- */
-  .log{border-top:1px solid var(--line);}
-  .log-row{display:grid; grid-template-columns:120px 1fr; gap:20px; padding:16px 0; border-bottom:1px solid var(--line);}
-  .log-row .k{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); padding-top:2px;}
-  .log-row .v{font-size:15px;}
-  @media (max-width:560px){ .log-row{grid-template-columns:1fr; gap:4px;} }
-
-  /* ---- Experience timeline ---- */
-  .timeline{position:relative; padding-left:26px; border-left:1px solid var(--line);}
-  .tl-item{position:relative; padding-bottom:34px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:''; position:absolute; left:-30px; top:5px; width:8px; height:8px;
-    background:var(--bg); border:2px solid var(--accent); border-radius:50%;
-  }
-  .tl-item .role{font-size:16.5px; font-weight:600; font-family:'Inter',sans-serif;}
-  .tl-item .org{color:var(--ink-soft); font-size:14.5px;}
-  .tl-item .when{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); margin-top:2px;}
-  .tl-item p{margin:10px 0 0; color:var(--ink-soft); font-size:14.5px; max-width:62ch;}
-
-  /* ---- Education ---- */
-  .edu-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
-  .edu-item .role{font-weight:600; font-size:15.5px;}
-  .edu-item .org{color:var(--ink-soft); font-size:14px; margin-top:2px;}
-  .edu-item .when{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); margin-top:6px;}
-  @media (max-width:640px){ .edu-grid{grid-template-columns:1fr;} }
-
-  /* ---- Connect / footer ---- */
-  .connect{text-align:left;}
-  .connect h2{font-size:1.9rem; max-width:20ch;}
-  .connect p{color:var(--ink-soft); max-width:56ch; margin-top:16px; font-size:15.5px;}
-  footer{padding:26px 0 60px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;}
-  footer .mono{font-size:12px; color:var(--ink-soft);}
 </style>
 </head>
 <body>
-
-<header class="bar">
-  <div class="bar-inner">
-    <div class="filetag"><strong>TEHAU_DEBARTHE</strong>.SYS &nbsp;/&nbsp; enterprise-ai-architecture</div>
-    <nav class="links">
-      <a href="#focus">Focus</a>
-      <a href="#systems">Systems</a>
-      <a href="#experience">Experience</a>
-      <a href="#connect">Connect</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">MODE</button>
+<div class="announcement"><div class="wrap"><span><strong>TEHAU DEBARTHE</strong> · MACHINE LEARNING ENGINEER</span><span>BUILDING INTELLIGENT HEALTHCARE SYSTEMS</span></div></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>TEHAU DEBARTHE</span></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="#why">Why</a><a href="#ai-ml">Research</a><a href="#work">Work</a><a href="#now">Questions</a><a href="#experience">Experience</a><a href="#about">About</a></nav>
+    <div class="actions"><button class="theme" id="themeToggle" type="button" aria-label="Toggle color theme">◐</button><a class="button primary" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener noreferrer">Connect</a></div>
   </div>
 </header>
+<main id="top">
+<section class="hero">
+  <div class="wrap"><div class="hero-card">
+    <div class="kicker">Machine learning engineering · Enterprise AI · Agentic systems</div>
+    <h1>Building intelligent <span class="gradient">healthcare systems.</span></h1>
+    <p class="trust"><em>AI moves at the speed of trust.</em></p>
+    <p class="lede">I’m Tehau. I’m interested in how people, knowledge, and intelligent systems work together. Most days that means building AI, exploring new ideas, and trying to leave systems a little better than I found them.</p>
+    <div class="hero-actions"><a class="button primary" href="#work">See what I build</a><a class="button" href="https://github.com/TehauD" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a></div>
+    <div class="micro"><span>Machine learning</span><span>Agentic systems</span><span>Trusted AI</span></div>
+  </div></div>
+</section>
 
-<main>
-  <section class="hero">
-    <svg class="hero-grid" id="heroGrid" viewBox="0 0 920 380" preserveAspectRatio="none" aria-hidden="true">
-      <!-- drawn in by script -->
-    </svg>
-    <div class="wrap hero-inner">
-      <div class="tag-row"><span class="dot"></span> Enterprise AI Architect · Machine Learning Engineer</div>
-      <h1 class="headline">Turning operational complexity into intelligent systems.</h1>
-      <p class="byline">
-        <strong>Tehau DeBarthe</strong> designs enterprise AI and agentic systems for
-        healthcare — combining governance, automation, and machine learning
-        to produce measurable outcomes. Currently building at
-        <strong>The University of Kansas Health System</strong>, Kansas City.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="https://github.com/TehauD" target="_blank" rel="noopener">View work on GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+<section id="about" class="about-section">
+  <div class="wrap">
+    <div class="about-intro">
+      <div class="about-title">
+        <div class="eyebrow">About me</div>
+        <h2>Curious by nature.<br>Practical by necessity.</h2>
       </div>
+      <aside class="profile-summary" aria-label="Professional profile">
+        <div class="profile-role">Machine Learning Engineer</div>
+        <p>I work across healthcare, AI, automation, and knowledge systems. I care about building technology that is useful, understandable, and worthy of trust.</p>
+        <div class="profile-tags" aria-label="Areas of interest">
+          <span>Healthcare AI</span><span>Agentic systems</span><span>Knowledge systems</span><span>Enterprise architecture</span>
+        </div>
+      </aside>
     </div>
-  </section>
 
-  <section id="focus">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Focus areas</h2>
-        <span class="sec-num mono">01 / OVERVIEW</span>
+    <article class="card about-card about-card-grid">
+      <div class="about-statement">
+        <div class="eyebrow">Working statement</div>
+        <h3>I build things, test ideas, and write down what I learn.</h3>
+        <p>My work often begins with a practical question: Can this process be clearer? Can this knowledge be easier to find? Can an intelligent system make the work more useful without making the people using it feel less in control?</p>
+        <p>I do not have every answer. I enjoy learning in public, comparing approaches, and turning useful ideas into systems people can actually use.</p>
       </div>
-      <div class="focus-grid">
-        <div class="focus-item"><span class="mark"></span><span class="label">Enterprise AI Architecture</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">Agentic Systems</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">Healthcare AI</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">M365 Copilot &amp; Copilot Studio</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">Azure AI &amp; AI Foundry</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">Intelligent Automation</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">Machine Learning Engineering</span></div>
-        <div class="focus-item"><span class="mark"></span><span class="label">AI Governance &amp; Knowledge Management</span></div>
+      <aside class="current-interests">
+        <div class="eyebrow">Current interests</div>
+        <ul>
+          <li>Human-AI collaboration</li>
+          <li>Organizational memory</li>
+          <li>Agentic systems</li>
+          <li>Knowledge graphs</li>
+          <li>Healthcare intelligence</li>
+          <li>AI governance</li>
+        </ul>
+      </aside>
+      <div class="about-invitation">
+        <p><strong>If something here helps you think differently, solve a problem, or start a conversation, I’m delighted. If I can help, please reach out.</strong></p>
+        <div class="link-row">
+          <a class="button" href="https://veritas.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Read The Daily ↗</a>
+          <a class="button" href="https://github.com/TehauD" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+          <a class="button" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener noreferrer">Start a conversation ↗</a>
+        </div>
       </div>
+    </article>
+  </div>
+</section>
+
+<section id="why"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Working principles · Personal perspective</div><h2>How I approach intelligent systems.</h2></div><p>These are working principles, not institutional policy. They reflect how I currently think about responsible AI, human-centered design, and the practical realities of introducing intelligence into real workflows.</p></div><div class="beliefs"><article class="card belief"><div class="number">01 / AMPLIFY</div><h3>Intelligence should amplify people.</h3><p>Useful AI supports judgment, reduces avoidable friction, and gives people more room for meaningful work.</p></article><article class="card belief"><div class="number">02 / TRUST</div><h3>Trust is part of the architecture.</h3><p>Clarity, accountability, security, and visible human control should be designed into the system from the beginning.</p></article><article class="card belief"><div class="number">03 / EVIDENCE</div><h3>Claims should be inspectable.</h3><p>Research questions, methods, limitations, and evidence should remain distinguishable from personal interpretation.</p></article><article class="card belief"><div class="number">04 / LEARN</div><h3>Knowledge should compound.</h3><p>Good systems preserve context, connect learning over time, and make useful discoveries easier to revisit and share.</p></article></div></div></section>
+
+
+
+<section id="ai-ml"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Research profile</div><h2>From models to intelligent systems.</h2></div><p>My interests span the full path from machine learning experiments to governed systems that interact with people, tools, data, and organizational knowledge.</p></div><div class="research-grid"><article class="card research-card"><div class="research-index">01</div><div class="eyebrow">Machine learning engineering</div><h3>Models in context</h3><p>Model development, evaluation, explainability, integration, and the surrounding software required to make machine learning usable.</p><div class="research-meta"><span>Evaluation</span><span>Explainability</span><span>Integration</span></div></article><article class="card research-card"><div class="research-index">02</div><div class="eyebrow">Agentic systems</div><h3>Tools, decisions, and control</h3><p>Tool-connected workflows with clear boundaries, observable behavior, and explicit opportunities for human review.</p><div class="research-meta"><span>Orchestration</span><span>Observability</span><span>Human review</span></div></article><article class="card research-card"><div class="research-index">03</div><div class="eyebrow">Knowledge systems</div><h3>Context that can compound</h3><p>Knowledge graphs, organizational memory, retrieval, and interfaces that help information become usable context.</p><div class="research-meta"><span>Knowledge graphs</span><span>Retrieval</span><span>Memory</span></div></article><article class="card research-card"><div class="research-index">04</div><div class="eyebrow">Trusted AI</div><h3>Governance by design</h3><p>Architecture patterns that make intelligent systems more transparent, reviewable, secure, and aligned with real workflows.</p><div class="research-meta"><span>Governance</span><span>Transparency</span><span>Safety</span></div></article></div></div></section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Selected systems and explorations</div><h2>Projects with a question behind them.</h2></div><p>Each entry distinguishes the motivating question, the system or exploration, and the methods visible in the work. Links are provided where public evidence is available.</p></div>
+    <div class="project-grid">
+      <article class="card project"><div class="project-top"><div><div class="project-type">System · Personal intelligence platform</div><h3>The Daily</h3></div><span class="mono">01</span></div><p class="why">Research question and motivation</p><p>Useful work disappears when decisions, experiments, blockers, and lessons remain scattered. The Daily creates a local-first record that stays structured, graph-ready, and entirely owned by the author.</p><div class="chips"><span class="chip">local-first</span><span class="chip">JavaScript</span><span class="chip">knowledge graph</span></div><a class="project-link" href="https://veritas.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Explore The Daily →</a></article>
+      <article class="card project"><div class="project-top"><div><div class="project-type">Study area · Clinical AI and explainability</div><h3>CheXpert</h3></div><span class="mono">02</span></div><p class="why">Research question and motivation</p><p>Clinical machine learning must make model behavior inspectable. This chest X-ray classification pipeline pairs convolutional models with Grad-CAM and Grad-CAM++ explainability.</p><div class="chips"><span class="chip">Python</span><span class="chip">computer vision</span><span class="chip">explainability</span></div><a class="project-link" href="https://github.com/TehauD/chexpert" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+      <article class="card project"><div class="project-top"><div><div class="project-type">System · Agentic infrastructure</div><h3>MCP Agent Toolkit</h3></div><span class="mono">03</span></div><p class="why">Research question and motivation</p><p>Agents become useful when tools are connected through clear, reusable interfaces. This Model Context Protocol server template provides a focused starting point for that integration.</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">MCP</span><span class="chip">tool orchestration</span></div><a class="project-link" href="https://github.com/TehauD/remote-mcp-server-authless" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+      <article class="card project"><div class="project-top"><div><div class="project-type">Exploration · Personal analytics</div><h3>Garmin AI</h3></div><span class="mono">04</span></div><p class="why">Research question and motivation</p><p>Personal data becomes more useful when patterns can be explored without giving up context. Garmin AI applies an intelligence-workbench approach to health and fitness data.</p><div class="chips"><span class="chip">Python</span><span class="chip">health data</span><span class="chip">analytics</span></div><a class="project-link" href="https://github.com/TehauD/garmin-ai" target="_blank" rel="noopener noreferrer">View repository →</a></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="systems">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Selected systems</h2>
-        <span class="sec-num mono">02 / OPEN SOURCE</span>
-      </div>
-      <div class="systems">
+<section id="now"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Current investigations</div><h2>Questions worth thinking about together.</h2></div><p>These are open questions rather than finished conclusions. I share them to invite thoughtful disagreement, useful references, and better ideas.</p></div><div class="question-grid"><article class="card question"><span class="question-mark">?</span><h3>How should an agent show its work?</h3><p>What does useful transparency look like when an intelligent system uses tools, retrieves knowledge, or recommends an action?</p></article><article class="card question"><span class="question-mark">?</span><h3>How can organizational memory remain useful?</h3><p>How can context accumulate without creating another burden to maintain or another repository people stop using?</p></article><article class="card question"><span class="question-mark">?</span><h3>What makes AI trustworthy in healthcare?</h3><p>How should evidence, uncertainty, accountability, privacy, and human judgment remain visible in the workflow?</p></article><article class="card question"><span class="question-mark">?</span><h3>Where should automation stop?</h3><p>Which decisions benefit from assistance, and which should remain explicitly human because context and accountability matter more than speed?</p></article></div><div class="idea-invite card"><div><div class="eyebrow">An open invitation</div><h3>Have a perspective, paper, problem, or idea?</h3><p>I would be glad to compare notes. Good systems rarely come from one discipline or one person.</p></div><a class="button primary" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener noreferrer">Share an idea ↗</a></div></div></section>
 
-        <div class="system">
-          <div class="name">daily<div class="path">/ developer intelligence workspace</div></div>
-          <div>
-            <div class="meta">
-              <span class="chip">local-first</span><span class="chip">javascript</span><span class="chip">single-file</span>
-            </div>
-            <p>A local-first, single-file developer journal. Structured captures for ideas, experiments, decisions, and wins; AI-assisted drafting that mirrors your own voice; every day versioned to Git.</p>
-            <a class="view" href="https://github.com/TehauD/daily" target="_blank" rel="noopener">View repository</a>
-          </div>
-        </div>
-
-        <div class="system">
-          <div class="name">chexpert<div class="path">/ healthcare predictive analytics</div></div>
-          <div>
-            <div class="meta">
-              <span class="chip">python</span><span class="chip">computer vision</span><span class="chip">healthcare</span>
-            </div>
-            <p>A CNN classification pipeline for chest X-rays with Grad-CAM and Grad-CAM++ explainability — applied machine learning against real clinical imaging data.</p>
-            <a class="view" href="https://github.com/TehauD/chexpert" target="_blank" rel="noopener">View repository</a>
-          </div>
-        </div>
-
-        <div class="system">
-          <div class="name">remote-mcp-server-authless<div class="path">/ agentic tooling</div></div>
-          <div>
-            <div class="meta">
-              <span class="chip">typescript</span><span class="chip">MCP</span><span class="chip">agentic ai</span>
-            </div>
-            <p>A Model Context Protocol server template — a starting point for wiring agentic systems into external tools without an auth layer in the way.</p>
-            <a class="view" href="https://github.com/TehauD/remote-mcp-server-authless" target="_blank" rel="noopener">View repository</a>
-          </div>
-        </div>
-
-        <div class="system">
-          <div class="name">garmin-ai<div class="path">/ personal analytics</div></div>
-          <div>
-            <div class="meta">
-              <span class="chip">python</span><span class="chip">health data</span>
-            </div>
-            <p>AI-assisted analysis of personal Garmin health and fitness data — applying the same systems-thinking approach to a personal dataset.</p>
-            <a class="view" href="https://github.com/TehauD/garmin-ai" target="_blank" rel="noopener">View repository</a>
-          </div>
-        </div>
-
-      </div>
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">The path here</div><h2>Experience</h2></div>
+      <p>A progression through enterprise platforms, application analysis, DevOps, principal data engineering, and machine learning.</p>
     </div>
-  </section>
-
-  <section id="initiatives">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Recent initiatives</h2>
-        <span class="sec-num mono">03 / AT UKHS</span>
-      </div>
-      <div class="log">
-        <div class="log-row"><div class="k">STRATEGY</div><div class="v">Enterprise AI strategy and governance programs</div></div>
-        <div class="log-row"><div class="k">AGENTIC</div><div class="v">Agentic contract-intelligence platforms</div></div>
-        <div class="log-row"><div class="k">CLINICAL</div><div class="v">Healthcare predictive analytics solutions</div></div>
-        <div class="log-row"><div class="k">TOOLING</div><div class="v">AI-powered software engineering copilots</div></div>
-        <div class="log-row"><div class="k">PATIENT</div><div class="v">Patient experience intelligence systems</div></div>
-        <div class="log-row"><div class="k">SCALE</div><div class="v">Operational automation eliminating 100,000+ manual activities</div></div>
-      </div>
+    <div class="timeline">
+      <article class="role">
+        <time>CURRENT</time>
+        <div><h3>Machine Learning Engineer</h3><div class="org">The University of Kansas Health System</div><p>Current role focused on machine learning and intelligent systems in healthcare.</p></div>
+      </article>
+      <article class="role">
+        <time>PREVIOUSLY</time>
+        <div><h3>Data Engineer Principal</h3><div class="org">The University of Kansas Health System</div></div>
+      </article>
+      <article class="role">
+        <time>PREVIOUSLY</time>
+        <div><h3>DevOps Engineer II</h3><div class="org">The University of Kansas Health System</div></div>
+      </article>
+      <article class="role">
+        <time>PREVIOUSLY</time>
+        <div><h3>Application Analyst II</h3><div class="org">The University of Kansas Health System</div></div>
+      </article>
+      <article class="role">
+        <time>2018 — 2019</time>
+        <div><h3>Senior Solution Designer</h3><div class="org">Cerner Corporation</div><p>Enterprise collaboration architecture for a complex healthcare technology environment.</p></div>
+      </article>
+      <article class="role">
+        <time>2009 — 2017</time>
+        <div><h3>SharePoint and Systems Roles</h3><div class="org">PQ Corporation · GlynnDevins · CommunityAmerica Credit Union</div><p>Systems administration, SharePoint architecture, and process automation.</p></div>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Experience</h2>
-        <span class="sec-num mono">04 / TIMELINE</span>
-      </div>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="role">Machine Learning Engineer</div>
-          <div class="org">The University of Kansas Health System</div>
-          <div class="when">Nov 2025 — Present</div>
-          <p>Leading enterprise AI and machine learning initiatives across clinical, legal, operational, and administrative domains — designing agentic architectures on Azure OpenAI, Azure AI Foundry, Copilot Studio, Dataverse, Fabric, and Power Platform.</p>
-        </div>
-        <div class="tl-item">
-          <div class="role">Application Analyst II</div>
-          <div class="org">The University of Kansas Health System</div>
-          <div class="when">Nov 2019 — Present</div>
-          <p>Subject matter expert on SharePoint migration across the Health System, KU School of Medicine, and Olathe Medical Center; uplifted legacy solutions with Power Platform canvas and model-driven apps.</p>
-        </div>
-        <div class="tl-item">
-          <div class="role">DevOps Engineer II</div>
-          <div class="org">The University of Kansas Health System</div>
-          <div class="when">Nov 2019 — Aug 2026</div>
-          <p>Delivered scalable end-to-end solutions across clinical and public-facing systems; built an OpenAI-driven repository and pipeline analyzer used as a foundational onboarding guide for new engineers.</p>
-        </div>
-        <div class="tl-item">
-          <div class="role">Sr Solution Designer</div>
-          <div class="org">Cerner Corporation</div>
-          <div class="when">Feb 2018 — Nov 2019</div>
-          <p>Designed and managed one of the largest Project Portal/SharePoint environments in North America — 100,000+ users, 15,000 site collections — while cross-training a development team in Bangalore.</p>
-        </div>
-        <div class="tl-item">
-          <div class="role">SharePoint &amp; Systems Roles</div>
-          <div class="org">PQ Corporation · GlynnDevins · CommunityAmerica Credit Union</div>
-          <div class="when">2009 — 2017</div>
-          <p>Eight years building the foundation — systems administration, SharePoint architecture, and process automation across finance, marketing, and chemical industries.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="gratitude">
+  <div class="wrap"><article class="card gratitude-card"><div class="eyebrow">Acknowledgements</div><h2>None of this was built alone.</h2><p>Every useful system reflects questions, criticism, patience, and knowledge shared by other people. I am grateful to the family, friends, colleagues, teachers, and collaborators who have helped shape how I think and build.</p><em>This site is a record of what I have been fortunate enough to learn, contribute, and build with others.</em></article></div>
+</section>
 
-  <section id="education">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Education &amp; credentials</h2>
-        <span class="sec-num mono">05 / RECORD</span>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-item">
-          <div class="role">B.A., Business Administration</div>
-          <div class="org">Graceland University</div>
-          <div class="when">2005 — 2009</div>
-        </div>
-        <div class="edu-item">
-          <div class="role">Data Courier Administrator</div>
-          <div class="org">Epic</div>
-          <div class="when">Issued Apr 2023</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="connect" class="connect">
-    <div class="wrap">
-      <h2>How agentic AI, automation, and governance combine into sustainable enterprise systems — that's the ongoing question.</h2>
-      <p>Open to conversations on enterprise AI architecture, healthcare ML, and agentic system design. Reach out on LinkedIn or take a look through the code on GitHub.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/TehauD" target="_blank" rel="noopener">Browse GitHub</a>
-      </div>
-    </div>
-  </section>
+<section class="connect">
+  <div class="wrap connect-inner"><div><div class="eyebrow">Build what comes next</div><h2>Let’s make the next idea more useful.</h2><p>If something here connects with your work, raises a question, or helps you see a problem differently, I would be delighted to hear from you. If I can help, I will.</p></div><div class="actions"><a class="button primary" href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener noreferrer">Start a conversation</a><a class="button" href="https://github.com/TehauD" target="_blank" rel="noopener noreferrer">Browse GitHub</a></div></div>
+</section>
 </main>
-
-<footer class="wrap">
-  <div class="mono">© 2026 Tehau DeBarthe</div>
-  <div class="mono">Kansas City Metropolitan Area</div>
-</footer>
-
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark"></span><span>TEHAU DEBARTHE</span></a><p>Building intelligent healthcare systems. AI moves at the speed of trust.</p></div><div class="footer-col"><h3>Explore</h3><a href="#why">Why</a><a href="#ai-ml">Research</a><a href="#work">Work</a></div><div class="footer-col"><h3>Build</h3><a href="https://veritas.azurewebsites.net/" target="_blank" rel="noopener noreferrer">The Daily ↗</a><a href="https://github.com/TehauD" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="footer-col"><h3>Connect</h3><a href="https://www.linkedin.com/in/tehau/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#about">About</a></div></div><div class="copyright"><span>© 2026 Tehau DeBarthe</span><span>Kansas City Metropolitan Area</span></div></div></footer>
 <script>
-  // Theme toggle: cycles system -> light -> dark -> system
-  (function(){
-    var root = document.documentElement;
-    var btn = document.getElementById('themeToggle');
-    var order = ['system','light','dark'];
-    var idx = 0;
-    btn.addEventListener('click', function(){
-      idx = (idx + 1) % order.length;
-      var mode = order[idx];
-      if(mode === 'system'){ root.removeAttribute('data-theme'); }
-      else { root.setAttribute('data-theme', mode); }
-    });
-  })();
-
-  // One-time hero grid draw-in
-  (function(){
-    var svg = document.getElementById('heroGrid');
-    if(!svg) return;
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var ns = 'http://www.w3.org/2000/svg';
-    var lines = [];
-    var cols = 12, rows = 6, w = 920, h = 380;
-    for(var c=0;c<=cols;c++){
-      var x = (w/cols)*c;
-      var l = document.createElementNS(ns,'line');
-      l.setAttribute('x1',x); l.setAttribute('y1',0);
-      l.setAttribute('x2',x); l.setAttribute('y2',h);
-      lines.push(l);
-    }
-    for(var r=0;r<=rows;r++){
-      var y = (h/rows)*r;
-      var l2 = document.createElementNS(ns,'line');
-      l2.setAttribute('x1',0); l2.setAttribute('y1',y);
-      l2.setAttribute('x2',w); l2.setAttribute('y2',y);
-      lines.push(l2);
-    }
-    lines.forEach(function(line, i){
-      line.setAttribute('stroke','var(--line)');
-      line.setAttribute('stroke-width','1');
-      svg.appendChild(line);
-      if(!reduce){
-        var len = 1000;
-        line.style.strokeDasharray = len;
-        line.style.strokeDashoffset = len;
-        line.style.transition = 'stroke-dashoffset 1.1s ease';
-        line.style.transitionDelay = (i * 14) + 'ms';
-        requestAnimationFrame(function(){
-          requestAnimationFrame(function(){
-            line.style.strokeDashoffset = 0;
-          });
-        });
-      }
-    });
-  })();
+(function(){
+  const root=document.documentElement;
+  const button=document.getElementById('themeToggle');
+  const saved=localStorage.getItem('tehau-theme');
+  if(saved==='dark') root.dataset.theme='dark';
+  button.addEventListener('click',function(){
+    const dark=root.dataset.theme==='dark';
+    if(dark){delete root.dataset.theme;localStorage.setItem('tehau-theme','light')}
+    else{root.dataset.theme='dark';localStorage.setItem('tehau-theme','dark')}
+  });
+})();
 </script>
-
 </body>
 </html>

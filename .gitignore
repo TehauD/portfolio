@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python virtualenv configurations and artifacts
+pyvenv.cfg
+.python-version
+pip-selfcheck.json
+.Python
+
+# Custom environment directories (if installed directly in root)
+[Bb]in/
+[Ii]nclude/
+[Ll]ib/
+[Ll]ib64/
+[Ll]ocal/
+[Ss]cripts/
